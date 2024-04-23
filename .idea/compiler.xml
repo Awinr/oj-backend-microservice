@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="oj-backend-model" />
+        <module name="oj-backend-judge-service" />
+        <module name="oj-backend-question-service" />
+        <module name="oj-backend-common" />
+        <module name="oj-backend-service-client" />
+        <module name="oj-backend-file-service" />
+        <module name="oj-backend-user-service" />
+        <module name="oj-backend-gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="shieroj-backend-gateway" target="1.8" />
+      <module name="shieroj-backend-judge-service" target="1.5" />
+      <module name="shieroj-backend-microservice" target="1.8" />
+      <module name="shieroj-backend-model" target="1.8" />
+      <module name="shieroj-backend-question-service" target="1.5" />
+      <module name="shieroj-backend-service-client" target="1.5" />
+      <module name="shieroj-backend-user-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
