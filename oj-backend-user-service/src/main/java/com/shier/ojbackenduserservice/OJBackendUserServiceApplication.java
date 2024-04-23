@@ -1,4 +1,4 @@
-package com.shier.ojbackendquestionservice;
+package com.shier.ojbackenduserservice;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -9,20 +9,18 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-/**
- * @author Shier
- */
+
 @SpringBootApplication()
-@MapperScan("com.shier.ojbackendquestionservice.mapper")
+@MapperScan("com.shier.ojbackenduserservice.mapper")
 @EnableScheduling
 @EnableAspectJAutoProxy(proxyTargetClass = true, exposeProxy = true)
 @ComponentScan("com.shier")
 @EnableDiscoveryClient
 @EnableFeignClients(basePackages ={"com.shier.ojbackendserviceclient.service"})
-public class ojBackendQuestionServiceApplication {
+public class OJBackendUserServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ojBackendQuestionServiceApplication.class, args);
+        SpringApplication.run(OJBackendUserServiceApplication.class, args);
     }
 
 }

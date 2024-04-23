@@ -18,9 +18,7 @@ import javax.annotation.Resource;
 
 import static com.shier.ojbackendcommon.constant.MqConstant.CODE_DLX_QUEUE;
 
-/**
- * @author Shier
- */
+
 @Component
 @Slf4j
 public class CodeMqFailConsumer {

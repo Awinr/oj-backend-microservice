@@ -1,5 +1,6 @@
-package com.shier.ojbackendjudgeservice;
+package com.shier.ojbackendquestionservice;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -8,22 +9,18 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-import static com.shier.ojbackendjudgeservice.mq.CodeMqInitMain.doInitCodeMq;
 
-/**
- * @author Shier
- */
 @SpringBootApplication()
+@MapperScan("com.shier.ojbackendquestionservice.mapper")
 @EnableScheduling
 @EnableAspectJAutoProxy(proxyTargetClass = true, exposeProxy = true)
 @ComponentScan("com.shier")
 @EnableDiscoveryClient
-@EnableFeignClients(basePackages = {"com.shier.ojbackendserviceclient.service"})
-public class ojBackendJudgeServiceApplication {
+@EnableFeignClients(basePackages ={"com.shier.ojbackendserviceclient.service"})
+public class ojBackendQuestionServiceApplication {
 
     public static void main(String[] args) {
-        // 初始化消息队列
-        doInitCodeMq();
-        SpringApplication.run(ojBackendJudgeServiceApplication.class, args);
+        SpringApplication.run(ojBackendQuestionServiceApplication.class, args);
     }
+
 }
